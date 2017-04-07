@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives | 此岸</title>
+  <title>js中关于字符串的常用方法的总结 | 此岸</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -166,87 +166,76 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2017/04/07/获取元素页面滚动距离兼容性写法/"></a></h4>
-                            
-                            <p><time datetime="2017-04-07T01:42:48.827Z"><a href="/2017/04/07/获取元素页面滚动距离兼容性写法/">2017-04-07</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/05/13/js中字符串的相关方法/">js中关于字符串的常用方法的总结</a></h4>
-                            
-                            <p><time datetime="2016-05-13T00:15:51.000Z"><a href="/2016/05/13/js中字符串的相关方法/">2016-05-13</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/03/25/hello-world/">Hello World</a></h4>
-                            
-                            <p><time datetime="2016-03-25T04:13:43.000Z"><a href="/2016/03/25/hello-world/">2016-03-25</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-05-13T00:15:51.000Z" itemprop="datePublished">
+          2016-05-13
+      </time>
+    
+</span>
+                <h1>js中关于字符串的常用方法的总结</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="js中关于字符串的常用方法的总结"><a href="#js中关于字符串的常用方法的总结" class="headerlink" title="js中关于字符串的常用方法的总结"></a>js中关于字符串的常用方法的总结</h2><ul>
+<li><p>substr 从起始索引号提取字符串中指定数目的字符;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var str = &quot;山月不知心底事&quot;;</div><div class="line">var newStr = str.substr(-3,4);</div><div class="line">//第一个参数是开始的截取字符串的位置，后面代表要截取字符串的长度,负数表示从后往前截取</div><div class="line">//第二个参数可选。子串中的字符数。必须是数值。如果省略了该参数，那么返回从 str 的开始位置到结尾的字串。</div><div class="line">//如果第二个参数的长度大于字符串的长度也不会报错，会直接的输出到最后一个字符串;</div></pre></td></tr></table></figure>
+</li>
+<li><p>substring() 提取字符串中介于两个指定下标之间的字符。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var str = &quot;山月不知心底事&quot;;</div><div class="line">var newStr = str.substring(1,4);</div><div class="line">// 前闭后开 (从索引1开始截取，截取到索引4前面一个字符)</div></pre></td></tr></table></figure>
+</li>
+<li><p>slice() 方法可提取字符串的某个部分，并以新的字符串返回被提取的部分。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var str = &quot;山月不知心底事&quot;;</div><div class="line">var newStr = str.slice(2,4);</div><div class="line">// 输出：不知</div><div class="line">//前闭后开</div></pre></td></tr></table></figure>
+</li>
+<li><p>charAt()  返回指定位置的字符<br><strong>tips</strong>: 在javascript中没有字符的概念，所以返回的是长度为1的字符串;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var str = &quot;山月不知心底事&quot;;</div><div class="line">document.write(str.charAt(1))</div><div class="line">// 返回月</div></pre></td></tr></table></figure>
+</li>
+<li><p>replace() 方法用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">// 普通替换</div><div class="line">var str=&quot;Visit Microsoft!&quot;</div><div class="line">document.write(str.replace(/Microsoft/, &quot;W3School&quot;))</div><div class="line">// 全局替换</div><div class="line">var str=&quot;Welcome to Microsoft! &quot;</div><div class="line">str=str + &quot;We are proud to announce that Microsoft has &quot;</div><div class="line">str=str + &quot;one of the largest Web Developers sites in the world.&quot;</div><div class="line"></div><div class="line">document.write(str.replace(/Microsoft/g, &quot;W3School&quot;))</div><div class="line">// 参数为正则表达式的替换 </div><div class="line">// 我们将把 &quot;Doe, John&quot; 转换为 &quot;John Doe&quot; 的形式：</div><div class="line">name = &quot;Doe, John&quot;;</div><div class="line">name.replace(/(\w+)\s*, \s*(\w+)/, &quot;$2 $1&quot;);</div><div class="line"></div><div class="line">// 关于字符串的一个小面试题</div><div class="line">&lt;script&gt;</div><div class="line">        var str=&quot;margin-top&quot;;</div><div class="line">        function Change(str)&#123;</div><div class="line">            var arr=str.split(&quot;-&quot;);</div><div class="line">            for(var i=1;i&lt;arr.length;i++)&#123;</div><div class="line">                arr[i]=arr[i].charAt(0).toUpperCase()+arr[i].substring(1);</div><div class="line">                //   将数组中的元素的第一个字母转化成为大写的</div><div class="line">            &#125;</div><div class="line">            str=arr.join(&quot;&quot;);</div><div class="line">            return str;</div><div class="line">        &#125;</div><div class="line">        console.log(Change(str));//borderBottomColor</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>concat() 方法用于连接两个或多个字符串。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var str1=&quot;Hello &quot;</div><div class="line">var str2=&quot;world!&quot;</div><div class="line">document.write(str1.concat(str2)) // Hello World!</div><div class="line">console.log(str1);  // Hello</div></pre></td></tr></table></figure>
+</li>
+<li><p>indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">stringObject.indexOf(searchvalue,fromindex)</div><div class="line">// 参数：</div><div class="line">// searchvalue	必需。规定需检索的字符串值。</div><div class="line">// 规定字符串中开始检索的位置  范围0 - stringObject.length-1 如省略该参数，则将从字符串的首字符开始检索。</div><div class="line">// indexOf() 方法对大小写敏感！</div><div class="line">// 如果要检索的字符串值没有出现，则该方法返回 -1。</div><div class="line">- split() 方法用于把一个字符串分割成字符串数组。</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>stringObject.split(separator,howmany)<br>// 参数1：从该参数指定的位置开始分割<br>// 参数2：分割后返回的子串不会多于这个参数指定的数组<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line"></div><div class="line">var str=&quot;How are you doing today?&quot;</div><div class="line"></div><div class="line">document.write(str.split(&quot; &quot;) + &quot;&lt;br /&gt;&quot;)</div><div class="line">document.write(str.split(&quot;&quot;) + &quot;&lt;br /&gt;&quot;)</div><div class="line">document.write(str.split(&quot; &quot;,3))</div><div class="line">输出：</div><div class="line">How,are,you,doing,today?</div><div class="line">H,o,w, ,a,r,e, ,y,o,u, ,d,o,i,n,g, ,t,o,d,a,y,?</div><div class="line">How,are,you</div><div class="line">// 注意返回的是数组</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<ul>
+<li>toLowerCase() 方法用于把字符串转换为小写。</li>
+<li>toLocaleLowerCase() 方法用于把字符串转换为小写。</li>
+<li>toUpperCase() 方法用于把字符串转换为大写。</li>
+<li>toLocaleUpperCase() 方法用于把字符串转换为大写。<br><strong>tips</strong>:与 toLowerCase(),,toUpperCase() 不同的是，toLocaleLowerCase() ,toLocaleUpperCase() 方法按照本地方式把字符串转换为小写。只有几种语言（如土耳其语）具有地方特有的大小写映射，所有该方法的返回值通常与 toLowerCase() 一样。</li>
+</ul>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2017/04/07/获取元素页面滚动距离兼容性写法/" style="float: left;">
+        ← 
+    </a>
+    
+    
+    <a class="pull-right" href="/2016/03/25/hello-world/">
+        Hello World →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+
+
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 

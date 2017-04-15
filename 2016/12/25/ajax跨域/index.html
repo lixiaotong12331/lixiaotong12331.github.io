@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>此岸</title>
+  <title>Hello World | 此岸</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -166,151 +166,80 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-<!-- ============================ Content =========================== -->
-
+      
 <section id="intro">
     <div class="container">
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/02/16/jquery post时content-type的几种取值/">jquery post时content-type的几种取值</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-02-16T02:35:32.000Z" itemprop="datePublished">
-          2016-02-16
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-12-24T16:00:00.000Z" itemprop="datePublished">
+          2016-12-25
       </time>
     
 </span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        jquery post时content-type的几种取值转载自zccst
-四种常见的 POST 提交数据方式
-我们知道，HTTP 协议是以 ASCII 码传输，建立在 TCP/IP 协议之上的应用层规范。规范把 HTTP 请求分为三个部分：状态行、请求头、消息主体。类似于下面这样：12345678910&lt;method&gt;     &lt;request-url&gt;         &lt;version&gt;     
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/02/16/jquery post时content-type的几种取值/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
+                <h1>Hello World</h1>
             </div>
         </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/02/15/offset，scroll系列/">js中的scroll和offset 使用比较的实例与分析</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-02-14T16:00:00.000Z" itemprop="datePublished">
-          2016-02-15
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        js中的scroll和offset 使用比较的实例与分析tips:  转载自
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="Ajax跨域问题"><a href="#Ajax跨域问题" class="headerlink" title="Ajax跨域问题"></a>Ajax跨域问题</h3><p>一、什么是跨域</p>
+<ul>
+<li>http:// www . google : 8080 / script/jquery.js<ul>
+<li><a href="http://是协议号" target="_blank" rel="external">http://是协议号</a></li>
+<li>www是子域名</li>
+<li>google是主域名</li>
+<li>8080是端口号</li>
+</ul>
+</li>
+</ul>
+<p>script/jquery.js （请求的地址）当协议、子域名、主域名、端口号中任意一各不相同时，都算不同的“域”。<br> 不同的域之间相互请求资源，就叫“跨域”。</p>
+<p> 二、出现跨域问题的情况</p>
+<p> 由于在工作中需要使用AJAX请求其他域名下的请求，但是会出现拒绝访问的情况，这是因为基于安全的考虑，AJAX只能访问本地的资源，而不能跨域访问。<br> 比如说你的网站域名是aaa.com，想要通过AJAX请求bbb.com域名中的内容，浏览器就会认为是不安全的，所以拒绝访问。</p>
+<p> <img src="imgs/kaiyu01.png" alt=""></p>
+<p> 三、处理跨域的方法1 – 代理<br> 这种方式是通过后台(ASP、PHP、JAVA、ASP.NET)获取其他域名下的内容，然后再把获得内容返回到前端，这样因为在同一个域名下，所以就不会出现跨域的问题。<br> 比如在北京（www.beijing.com/sever.php）和上海（www.shanghai.com/sever.php）各有一个服务器，北京的后端（www.beijing.com/sever.php）直接访问上海的服务，然后把获取的响应值返回给前端。<br> 也就是北京的服务在后台做了一个代理，前端只需要访问北京的服务器也就相当与访问了上海的服务器。这种代理属于后台的技术，所以不展开叙述。</p>
+<p> 四、处理跨域的方法2 – JSONP</p>
+<p> 假设在<a href="http://www.aaa.com/index.php这个页面中向http://www.bbb.com/getinfo.php提交GET请求，那么我们在www.aaa.com页面中添加如下代码：" target="_blank" rel="external">http://www.aaa.com/index.php这个页面中向http://www.bbb.com/getinfo.php提交GET请求，那么我们在www.aaa.com页面中添加如下代码：</a></p>
+<p><img src="imgs/kaiyu02.png" alt=""></p>
+<p>当GET请求从<a href="http://www.bbb.com/getinfo.php返回时，可以返回一段JavaScript代码，这段代码会自动执行，可以用来负责调用http://www.aaa.com/index.php页面中的一个callback函数。看下面一个列子：" target="_blank" rel="external">http://www.bbb.com/getinfo.php返回时，可以返回一段JavaScript代码，这段代码会自动执行，可以用来负责调用http://www.aaa.com/index.php页面中的一个callback函数。看下面一个列子：</a></p>
+<p>在www.aaa.com页面中：<br><img src="imgs/kaiyu03.png" alt=""></p>
+<p>在www.bbb.com页面中：</p>
+<p>　　jsonp({ “name”:”周星驰”,”age”:45 });</p>
+<p>也就是在www.aaa.com页面中声明，在www.bbb.com页面中调用。但是JSONP只支持 “GET” 请求，但不支持 “POST” 请求。</p>
+<p>五、处理跨域的方法3 – XHR2（推荐方法）</p>
+<p>“XHR2” 全称 “XMLHttpRequest Level2” 是HTML5提供的方法，对跨域访问提供了很好的支持，并且还有一些新的功能。</p>
+<ul>
+<li><p>IE10一下的版本都不支持</p>
+</li>
+<li><p>只需要在服务器端头部加上下面两句代码：</p>
+</li>
+</ul>
+<p>　　header( “Access-Control-Allow-Origin:*” );<br>　　header( “Access-Control-Allow-Methods:POST,GET” );</p>
+<blockquote>
+<p><a href="http://www.cnblogs.com/fanyx/p/5775939.html" target="_blank" rel="external">转载自</a></p>
+</blockquote>
 
-offsetWidth: 对象本身的宽度 不能对其进行赋值.设置对象到页面顶部的距离请用style.top属性.与style.width属性的区别在于:如对象的宽度设定值为百分比宽度,则无论页面变大还是变小,style.width都返回此百分比,而offsetWidth则返回在不同页面中对象的宽度值而不是百分比值
-offsetHeight:对象本身的高度 与
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/02/15/offset，scroll系列/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2015/12/25/hello-world/">Hello World</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2015-12-24T16:00:00.000Z" itemprop="datePublished">
-          2015-12-25
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new p
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2015/12/25/hello-world/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
         <nav class="pagination" role="pagination">
-          <a class="pull-left" href="/">← Newer Posts</a>
-          
-        </nav>
+    
+    <a class="pull-left" href="/2017/04/13/HTML及资源是如何加载的/" style="float: left;">
+        ← 
+    </a>
+    
+    
+    <a class="pull-right" href="/2016/05/15/获取元素页面滚动距离兼容性写法/">
+        获取页面滚动距离的兼容性写法 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+
+
+</div>
     </div>
 </section>
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
-        </div>
-    </div>
-</section>
-<!-- ============================ END Content =========================== -->
+
 
       
 <!-- ============================ Footer =========================== -->

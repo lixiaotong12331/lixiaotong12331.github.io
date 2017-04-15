@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -166,151 +166,72 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-<!-- ============================ Content =========================== -->
-
+      
 <section id="intro">
     <div class="container">
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/02/16/jquery post时content-type的几种取值/">jquery post时content-type的几种取值</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-02-16T02:35:32.000Z" itemprop="datePublished">
-          2016-02-16
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2017-04-13T15:42:09.728Z" itemprop="datePublished">
+          2017-04-13
       </time>
     
 </span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        jquery post时content-type的几种取值转载自zccst
-四种常见的 POST 提交数据方式
-我们知道，HTTP 协议是以 ASCII 码传输，建立在 TCP/IP 协议之上的应用层规范。规范把 HTTP 请求分为三个部分：状态行、请求头、消息主体。类似于下面这样：12345678910&lt;method&gt;     &lt;request-url&gt;         &lt;version&gt;     
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/02/16/jquery post时content-type的几种取值/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
+                <h1></h1>
             </div>
         </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/02/15/offset，scroll系列/">js中的scroll和offset 使用比较的实例与分析</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-02-14T16:00:00.000Z" itemprop="datePublished">
-          2016-02-15
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        js中的scroll和offset 使用比较的实例与分析tips:  转载自
+        <div class="col-md-8 col-md-offset-2">
+      		<blockquote>
+<p><a href="http://www.jb51.net/web/22931.html" target="_blank" rel="external">朱涛，出处</a></p>
+</blockquote>
+<p>一个html有若干个外部资源(js,css,flash,image等),这些请求是何时下载的,又是何时执行的?<br>不清楚,不明白, 所以也就不知道我写的js究竟何时执行的, 也就不知道为什么很多高性能的建议是要将js置于一个 html底端的之前.<br>如果你也不是很明确,请来和我一起学习吧.<br>首先我们来看一个示例的html页面,如下:</p>
+<p><img src="imgs/htmlruhejiazai01.png" alt=""><br>它有如下几种资源:</p>
+<ol>
+<li>3个外部js文件,1个inline js代码</li>
+<li>1个外部css文件, 1个inline css代码</li>
+<li>1个image文件,及1个js请求的image</li>
+</ol>
+<ul>
+<li>在分析之前,我们来看看firefox对这个html请求的结果, 如下图:<br><img src="imgs/htmlruhejiazai02.png" alt=""><br>我们先分析下,然后再去说明这2种请求结果的不同.<br>请求分析<br>首先说明下面这些描述主要是基于自己google, 咨询朋友和在 SO 和 IRC 上获得, 我并没有阅读相关的spec(当然我很想阅读,如果知道相关spec的朋友请留言谢谢), 不能保证其正确性和准确性,风险自担 :D.<br>基于相关的调研, 我的理解为, 对于一个URI请求, 浏览器会按照下面的请求和执行顺序进行:</li>
+</ul>
+<ol>
+<li>一个线程对DOM进行下载(也就是html, 而不去管html中的外部资源)</li>
+<li>另外一个线程会开始分析已经下载的DOM, 并开始下载其中的外部资源(如js, css, image等)</li>
+<li>第三个线程(如果有的话)会去下载2正在下载的以外的外部资源</li>
+<li>如果允许更多的连接, 更多的线程会继续下载其它资源</li>
+</ol>
+<p>然后我们看执行顺序(js的执行, css的应用等):</p>
+<ol>
+<li>只要浏览器”看到了”了js代码,它就会执行</li>
+<li>浏览器是从下到下,一行一行地执行</li>
+<li>如果js代码位于一个函数或者对象中,则只有当函数或者对象被调用时才会执行</li>
+<li>而所谓的direct code(不处于函数或者对象中的代码),则会从上到下顺序执行</li>
+<li>当css文件下载完成时, 相应的样式也会应用到DOM上</li>
+<li>onload或者jquery的$(document).ready()是在DOM下载完成后执行</li>
+</ol>
+<p>在实际的浏览器中, 一般遇到<script>标签会自动block住其它线程的下载, 如firefox, 这也是为什么 在web开发中常常推荐将<script>标签置于</body>之前的原因.<br>但是并非所有的浏览器都block, 如chrome并不会block住其它的connection. 所以具体的load还需要参考具体的浏览器实现.<br>建议, 将<script></script>标签置于之前, 这样可以在大多数情况下都得到较好的性能.<br>对Firefox和chrome的请求分析<br>我们回过头来看下上面2个图中的请求响应图.</p>
+<p>Firefox<br>有如下特征:<br>首先下载html<br>html下载完成后, 从上到下依次下载外部文件(js, css,img)<br>js会block其它外部文件的下载<br>其它文件会并行下载</p>
+<p>chrome<br>有如下特征:<br>首先下载html<br>从上到下依次下载外部文件(js,css,img)<br>各个资源的下载顺序是并行的<br>你可能会奇怪如果js可以并行下载,那么可能位于DOM下面的代码会先执行, 首先可以肯定的是 即使下面的js先完成下载,也不会影响到整体的从上到下的执行顺序,浏览器会维护这种顺序的关系, chrome的这种方式也是未来浏览器的一种趋势, 而这也是为什么chrome能够更快的原因之一.<br>有意思的一个插曲<br>在提出这个问题后,我便多方入手, 向朋友咨询, 向 SO 提出问题, 甚至去Firefox的 IRC 进行了提问,<br>回答的朋友还都是很耐心的, 不过, 他们大多向我问了一个问题 做WEB开发, 你为什么要了解这些细节.<br>对于这样的问题,我还是比较纳闷的, 我一直认为 一个好的程序员,不仅需要知道how, 还要知道what, 甚至why,<br>知道how,只说明你是一个合格的码工,只会简单地使用别人提供的东西来开发.<br>知道what, 说明你开始去关注背后是如何实现的, 随着时间推进, 这时候你会逐渐成为一个有经验的程序员.<br>知道why, 说明你开始向hacker的路迈进了, 开始逐步走向了技术牛人的路线了,长此以往你会有很大的成长的. 参考 <a href="http://www.catb.org/~esr/faqs/hacker-howto.html" target="_blank" rel="external">How To Become A Hacker.</a></p>
 
-offsetWidth: 对象本身的宽度 不能对其进行赋值.设置对象到页面顶部的距离请用style.top属性.与style.width属性的区别在于:如对象的宽度设定值为百分比宽度,则无论页面变大还是变小,style.width都返回此百分比,而offsetWidth则返回在不同页面中对象的宽度值而不是百分比值
-offsetHeight:对象本身的高度 与
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/02/15/offset，scroll系列/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2015/12/25/hello-world/">Hello World</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2015-12-24T16:00:00.000Z" itemprop="datePublished">
-          2015-12-25
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new p
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2015/12/25/hello-world/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
         <nav class="pagination" role="pagination">
-          <a class="pull-left" href="/">← Newer Posts</a>
-          
-        </nav>
+    
+    
+    <a class="pull-right" href="/2016/12/25/ajax跨域/">
+        Hello World →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+
+
+</div>
     </div>
 </section>
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
-        </div>
-    </div>
-</section>
-<!-- ============================ END Content =========================== -->
+
 
       
 <!-- ============================ Footer =========================== -->
